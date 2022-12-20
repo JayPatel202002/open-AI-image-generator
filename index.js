@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv').config();
 
-const port = 6000;
+const port = 6500;
 const app = express();
 
 app.use(express.json());
