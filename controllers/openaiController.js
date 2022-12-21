@@ -2,7 +2,7 @@ const { Configuration, OpenAIApi } = require('openai');
 const configuration = new Configuration({
     apiKey: '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',
 })
-const openai = new OpenAIApi(configuration);  
+const openai = new OpenAIApi(configuration) 
 
 
 const generateImage = async (req, res)=>{
@@ -22,10 +22,10 @@ const generateImage = async (req, res)=>{
         })
     } catch (error) {
         if (error.response) {
-            console.log(error.response.status);
-            console.log(error.response.data);
+            console.log(error.response.status)
+            console.log(error.response.data)
           } else {
-            console.log(error.message);
+            console.log(error.message)
           }
         res.status(400).json({
             success: false,

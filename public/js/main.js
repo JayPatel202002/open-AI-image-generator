@@ -6,7 +6,7 @@ function onSubmit(e){
     const size = document.querySelector('#size').value;
 
     if(prompt === ''){
-        alert('Please add some text');
+        alert('Please add some text')
         return;
     }
     generateImageRequest(prompt, size) 
@@ -32,7 +32,7 @@ async function generateImageRequest(prompt, size){
             throw new Error('The image could not be generated');
         }
 
-        const data = await response.json();
+        const data = await response.json()
         // console.log(data);
         const imageUrl = data.data;
 
@@ -45,9 +45,9 @@ async function generateImageRequest(prompt, size){
 }
 
 function showSpinner(){
-    document.querySelector('.spinner').classList.add('show');
+    document.querySelector('.spinner').classList.add('show')
 }
 function removeSpinner(){
-    document.querySelector('.spinner').classList.remove('show');
+    document.querySelector('.spinner').classList.remove('show')
 }
 document.querySelector('#image-form').addEventListener('submit', onSubmit);
